@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DynamicDivComponent } from './dynamic-div/dynamic-div.component';
+import { DynamicDivRoutingModule } from './dynamic-div-routing.module';
 
 
 
@@ -9,7 +10,8 @@ import { DynamicDivComponent } from './dynamic-div/dynamic-div.component';
     DynamicDivComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    DynamicDivRoutingModule
   ],
   exports: [
     DynamicDivComponent

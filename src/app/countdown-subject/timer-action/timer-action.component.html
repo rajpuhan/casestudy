@@ -1,0 +1,12 @@
+<div>
+    <label for="time">Enter Timer Limit</label><input type="text" name="time" id="time" [(ngModel)]="time"/>
+    <button (click)="startTimer()">Start/Pause</button>
+    <button (click)="resetTimer()">Reset</button>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let timeValue of listPauseTimer">
+            {{timeValue}}
+        </li>
+    </ul>
+</div>

@@ -1,4 +1,31 @@
 <!-- <app-countdown-main></app-countdown-main> -->
 <!-- <app-category-page></app-category-page> -->
 <!-- <app-student-data></app-student-data> -->
-<app-dynamic-div></app-dynamic-div>
+<!-- <app-dynamic-div></app-dynamic-div> -->
+<header>
+    <nav>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/route1']" routerLinkActive="active" >Route 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/route2']">Route 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/route3']">Route 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/route4']">Route 4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/route5']">Route 5</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/route6']">Route 6</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+<router-outlet></router-outlet>
+</main>

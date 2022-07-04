@@ -1,0 +1,30 @@
+.table{
+    width: 70%;
+    border-spacing: 0;
+    &-header{
+        th{
+            border-bottom: 2px solid #1171ba;
+            background-color: #26a1c0;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+    &-body{
+        tr{
+            &:nth-child(even){
+                td{
+                    background-color: #62d7f4;
+                }
+            }
+            &:nth-child(odd){
+                td{
+                    background-color: #ffffff;
+                }
+            }
+        }
+        td {
+            border-bottom: 2px solid #1171ba;
+            padding: 10px;
+        }
+    }
+}
