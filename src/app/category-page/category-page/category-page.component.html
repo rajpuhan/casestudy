@@ -1,0 +1,12 @@
+<section class="page-wrapper">
+    <div class="page-header">
+        <button (click)="showGridView()">Grid View</button>
+        <button (click)="hideGridView()">List View</button>
+        <select [(ngModel)]="filterItem">
+            <option *ngFor="let item of filterItems" [value]="item">{{item}}</option>
+        </select>
+    </div>
+    <div class="page-content" [ngClass]="{'column': !isGridView}">
+        <div class="item"  *ngFor="let item of numbers"></div>
+    </div>
+</section>

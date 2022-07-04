@@ -1,0 +1,23 @@
+.page{
+    &-wrapper{
+        display: grid;
+        row-gap: 25px;
+    }
+    &-header{
+        display: grid;
+        grid-template-columns: 10% 10% 10%;
+        column-gap: 10px;
+    }
+    &-content{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 25px;
+        & .item{
+            height: 150px;
+            border: 2px solid #3c3c3c;
+        }
+        &.column{
+            grid-template-columns: auto auto;
+        }
+    }
+}

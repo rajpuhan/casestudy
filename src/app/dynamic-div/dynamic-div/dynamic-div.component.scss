@@ -1,0 +1,25 @@
+.div{
+    &-container {
+        display: grid;
+        grid-template-columns: subgrid;
+        row-gap: 10px;
+        overflow: auto;
+        height: 100vh;
+        .row{
+            display: grid;
+            grid-template-columns: repeat(200, auto);
+            gap: 10px;
+        }
+        .cell{
+            height: 30px;
+            border: 2px solid #3c3c3c;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            button{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

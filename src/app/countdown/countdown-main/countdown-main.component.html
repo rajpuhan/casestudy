@@ -1,0 +1,11 @@
+<section class="countdown">
+    <div class="countdown__slot--1">
+        <app-timer [start]="startTime"></app-timer>
+    </div>
+    <div class="countdown__slot--2">
+        <app-timer-action (onStart)="updateTime($event)" (onReset)="resetTime()"></app-timer-action>
+    </div>
+    <div class="countdown__slot--3">
+        <app-timer-details [pausedAt]="pauseTimeStamp" [reset]="clearTime"></app-timer-details>
+    </div>
+</section>

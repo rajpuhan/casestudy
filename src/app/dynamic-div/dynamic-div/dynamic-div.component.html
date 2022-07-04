@@ -1,0 +1,7 @@
+<section class="div-container" (scroll)="addCell($event)">
+    <div class="row" *ngFor="let row of rows; let rowID = index">
+        <div *ngFor="let cell of cells; let cellID = index" class="cell">
+            <button (click)="showMessage(rowID, cellID)">{{(200*rowID)+cellID+1}}</button>
+        </div>
+    </div>
+</section>

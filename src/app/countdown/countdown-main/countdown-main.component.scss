@@ -1,0 +1,13 @@
+.countdown{
+    border: 3px solid #afafaf;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    &__slot--1,
+    &__slot--2{
+        flex: 1 1 50%;
+    }
+    &__slot--3{
+        flex: 1 1 100%;
+    }
+}
