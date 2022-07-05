@@ -15,20 +15,8 @@ export class TimerDetailsComponent implements OnInit {
       this.pausedTimeList = [...data.listTimeStamp];
     })
    }
-//   @Input() set pausedAt(value: Date) {
-//     // alert(value);
-//     this.pauseTimeStamp = value;
-//     this.pausedTimeList.unshift(value);
-//  }
- 
-//  get pausedAt(): Date {
- 
-//      return this.pauseTimeStamp;
-
-//  }
 
  @Input() set reset(value: boolean) {
-  // alert(value);
   this.resetFlag = value;
   if(value){
     this.pausedTimeList = [];
