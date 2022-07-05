@@ -7,21 +7,22 @@ import { Observable, Subject } from 'rxjs';
 export class CountSubjectService {
 
   constructor() { }
+  private pauseCount = new Subject<any>();
   private pauseTimeStampSubject = new Subject<any>();
   private listPauseTimeStamp : Date[] = [];
   private currentTimer= new Subject<any>();
   // private listCurrentTimer: number[] = [];
-    // setStartTime(time: number) {
-    //     this.startTime.next({ time: time });
-    // }
+    setPauseCount(count: number) {
+        this.pauseCount.next({ pauseCount: count });
+    }
 
-    // clearStartTime() {
-    //     this.startTime.next();
-    // }
+    clearPauseCount() {
+        this.pauseCount.next();
+    }
 
-    // getStartTime(): Observable<any> {
-    //     return this.startTime.asObservable();
-    // }
+    getPauseCount(): Observable<any> {
+        return this.pauseCount.asObservable();
+    }
 
     setPauseTimeStamp(timeStamp: Date) {
       this.listPauseTimeStamp.unshift(timeStamp)

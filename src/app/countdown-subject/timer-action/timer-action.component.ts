@@ -15,6 +15,8 @@ export class TimerActionComponent implements OnInit {
   public isTimerStarted : boolean = false;
   public listPauseTimer: number[] = [];
   public intervalTimer!: any;
+  public pauseCount: number = 0;
+  public resetCount: number = 0;
   constructor(private timerService: CountSubjectService) { 
   }
 
@@ -34,11 +36,15 @@ export class TimerActionComponent implements OnInit {
       clearInterval(this.intervalTimer);
       this.listPauseTimer.push(this.startTime);
       this.timerService.setPauseTimeStamp(new Date());
+      this.pauseCount++;
+      this.timerService.setPauseCount(this.pauseCount);
+
     }
   }
   resetTimer(): void {
     this.isTimerStarted = false;
     this.timerService.clearPauseTimeStamp();
+    this.resetCount++;
   }
 
   updateStartTime(value: number){

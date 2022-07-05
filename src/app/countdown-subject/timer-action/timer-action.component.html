@@ -1,6 +1,6 @@
 <div>
     <label for="time">Enter Timer Limit</label><input type="text" name="time" id="time" [ngModel]="time" (ngModelChange)="updateStartTime($event)"/>
-    <button (click)="startTimer()">Start/Pause</button>
+    <button (click)="startTimer()">{{isTimerStarted?'Pause':'Start'}}</button>
     <button (click)="resetTimer()">Reset</button>
 </div>
 <div>

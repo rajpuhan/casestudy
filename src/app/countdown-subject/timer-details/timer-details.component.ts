@@ -8,12 +8,17 @@ import { CountSubjectService } from '../services/count-subject.service';
 })
 export class TimerDetailsComponent implements OnInit {
   public pausedTimeList : Array<Date> = [];
-  public pauseTimeStamp !: Date;
+  public pauseCount : number = 0;
   public resetFlag !: boolean;
   constructor(private timerService: CountSubjectService) {
     this.timerService.getPauseTimeStamp().subscribe((data)=>{
       this.pausedTimeList = [...data.listTimeStamp];
-    })
+    });
+    this.timerService.getPauseCount().subscribe((data)=>{
+      console.log(data);
+      
+      this.pauseCount = data.pauseCount;
+    });
    }
 
  @Input() set reset(value: boolean) {
